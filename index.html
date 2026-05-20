@@ -35,13 +35,13 @@
         {"@type": "Question", "name": "2026年国内还有便宜好用的翻墙软件吗？", "acceptedAnswer": {"@type": "Answer", "text": "有的。GoDuck VPN 通过BGP专线与VLESS/Trojan协议优化，每月仅需一杯奶茶钱，是目前公认的高性价比梯子，且提供7天免费试用。"}},
         {"@type": "Question", "name": "为什么国外的VPN在大牌在大陆经常连接失败？", "acceptedAnswer": {"@type": "Answer", "text": "因为防火长城对通用协议进行了深度包检测。GoDuck VPN 采用自研混淆技术，能将流量伪装成正常 HTTPS 请求，从而实现稳定翻墙。"}},
         {"@type": "Question", "name": "翻墙软件连不上怎么办？", "acceptedAnswer": {"@type": "Answer", "text": "建议：1. 切换协议（从WireGuard切至Trojan）；2. 避开晚高峰；3. 手动切换至冷门节点；4. 更新至最新客户端版本。"}},
-        {"@type": "Question", "name": "自建梯子为什么不推荐？", "acceptedAnswer": {"@type": "Answer", "text": "自建梯子不仅运维成本高，而且IP极易被墙。对于个人用户，使用专业机场的专线（IPLC/IEPL）更加稳定安全且性价比高。"}}
+        {"@type": "Question", "name": "自建梯子为什么不推荐？", "acceptedAnswer": {"@type": "Answer", "text": "自建梯子不仅运维成本高，而且IP极易被墙。个人用户，使用专业机场的专线（IPLC/IEPL）更加稳定安全且性价比高。"}}
       ]
     }
     </script>
     <style>
         :root { --accent: #FCB400; --bg: #f8fafc; --text: #1e293b; }
-        body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; margin: 0; padding-bottom: 80px; }
+        body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; margin: 0; padding-bottom: 100px; }
         .container { max-width: 850px; margin: 0 auto; padding: 20px; }
         .card { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 25px; }
         /* TOC 目录样式 */
@@ -60,9 +60,25 @@
         .seo-table th, .seo-table td { border: 1px solid #e2e8f0; padding: 12px; }
         .seo-table th { background: #f1f5f9; }
         .footer-note { text-align: center; color: #64748b; font-size: 12px; margin-top: 50px; }
-        .sticky-cta { position: fixed; bottom: 0; left: 0; width: 100%; padding: 10px 20px; background: white; box-shadow: 0 -2px 10px rgba(0,0,0,0.1); text-align: center; z-index: 100; }
-        .sticky-cta a { display: block; background: var(--accent); color: #000; padding: 15px; border-radius: 8px; font-weight: bold; text-decoration: none; }
-        img { max-width: 100%; border-radius: 8px; margin: 15px 0; }
+        
+        /* 🚀 底部悬浮条：终极修复与完美多端兼容 */
+        .sticky-cta { 
+            position: fixed; 
+            bottom: 0; 
+            left: 50%; 
+            transform: translateX(-50%); 
+            width: 100%; 
+            max-width: 850px; /* PC端完美契合正文宽度，不再全螢幕爆開 */
+            padding: 12px 20px; 
+            background: rgba(255, 255, 255, 0.95); 
+            backdrop-filter: blur(10px);
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.06); 
+            text-align: center; 
+            z-index: 100; 
+            box-sizing: border-box; /* ⚡ 核心修复：强制向内收缩，防止右侧爆开 */
+        }
+        .sticky-cta a { display: block; background: var(--accent); color: #000; padding: 15px; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 16px; box-shadow: 0 4px 10px rgba(252,180,0,0.2); }
+        img { max-width: 100%; border-radius: 8px; margin: 15px 0; height: auto; }
     </style>
 </head>
 <body>
@@ -83,7 +99,7 @@
     </nav>
 
     <section class="card">
-        <p><strong>前言：</strong> 随着 GFW 防火墙 DPI 检测技术的升级，许多“老机场”和昂贵的海外大牌 VPN 频繁出现丢包、掉线、破图等问题。很多大陆用户发现，与其花大钱买“虚名”，不如选择一款<strong>针对国内网络环境优化、平价且维护及时</strong>的加速器。</p>
+        <p><strong>前言：</strong> 随着 GFW 防火墙 DPI 检测技术的升级，许多“老机场” and 昂贵的海外大牌 VPN 频繁出现丢包、掉线、破图等问题。很多大陆用户发现，与其花大钱买“虚名”，不如选择一款<strong>针对国内网络环境优化、平价且维护及时</strong>的加速器。</p>
         <a href="download.html" class="btn" rel="nofollow noopener noreferrer">🚀 立即领取 GoDuck 7天免费试用</a>
     </section>
 
@@ -117,6 +133,11 @@
             <li><strong>检查系统时间：</strong> 时间同步是连接成功的先决条件，时间偏差超过 90 秒会导致认证失败。</li>
             <li><strong>避免晚高峰折腾：</strong> 如果 20:00 - 23:00 速度极慢，那是运营商对加密流量进行的 QoS 降级，建议此时使用带有 <strong>IPLC 专线</strong>的节点。</li>
         </ul>
+    </section>
+
+    <section class="card" style="text-align: center; margin-top: 40px;">
+        <h3>🚀 运维极客开源工具箱说明</h3>
+        <p style="font-size: 14px; color: #64748b;">本项目不仅提供网络优化指南，同时在开源目录 <a href="https://github.com/s03350aa99/s03350aa99.github.io/tree/main/tools" target="_blank" style="color: var(--accent); font-weight: bold;">/tools</a> 中托管了多款自动化网站运维、Google Search Console 自动推送及多节点延迟监控脚本，欢迎各位站长及技术同好 Fork 与交流。</p>
     </section>
 
     <footer class="footer-note">
