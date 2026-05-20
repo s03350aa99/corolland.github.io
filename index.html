@@ -40,12 +40,27 @@
       ]
     }
     </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://s03350aa99.github.io/"
+      }]
+    }
+    </script>
+
     <style>
         :root { --accent: #FCB400; --bg: #f8fafc; --text: #1e293b; }
         body { font-family: system-ui, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; margin: 0; padding-bottom: 100px; }
         .container { max-width: 850px; margin: 0 auto; padding: 20px; }
         .card { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); margin-bottom: 25px; }
         
+        /* TOC 目录样式 */
         .toc { background: #fff; border: 2px solid var(--accent); padding: 20px; border-radius: 12px; margin: 25px 0; }
         .toc h3 { margin: 0 0 10px 0; font-size: 18px; color: #000; }
         .toc ul { list-style: none; padding: 0; margin: 0; }
@@ -64,6 +79,7 @@
         .seo-table th { background: #f1f5f9; }
         .footer-note { text-align: center; color: #64748b; font-size: 12px; margin-top: 50px; }
         
+        /* 🚀 底部悬浮条：极致响应式与排版修复 */
         .sticky-cta { 
             position: fixed; 
             bottom: 0; 
@@ -77,7 +93,7 @@
             box-shadow: 0 -4px 15px rgba(0,0,0,0.06); 
             text-align: center; 
             z-index: 100; 
-            box-sizing: border-box; 
+            box-sizing: border-box; /* 强制向内收缩，完美修复右侧爆开 Bug */
         }
         .sticky-cta a { display: block; background: var(--accent); color: #000; padding: 15px; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 16px; box-shadow: 0 4px 10px rgba(252,180,0,0.2); }
         img { max-width: 100%; border-radius: 8px; margin: 15px 0; height: auto; }
@@ -125,7 +141,7 @@
 
     <section id="tech">
         <h2>2. 技术揭秘：为什么传统协议会失效？</h2>
-        <p>防火审查机制并不是简单的“IP 黑名单”。现代翻墙的核心在于<strong>流量伪装 (Obfuscation)</strong>。传统的 VPN 协议（如 PPTP, L2TP, 以及未经优化的 WireGuard）拥有固定的握手特征。相关检测系统通过对数据包的包长、间隔时间、握手顺序进行概率分析，就能断定这是否为加密翻墙流量。</p>
+        <p>防火审查机制并不是简单的“IP 黑名单”。现代翻墙的核心在于<strong>流量伪装 (Obfuscation)</strong>。传统的 VPN 协议（如 PPTP, L2TP, 以及未经优化的 WireGuard）拥有固定的握手特征。相关检测系统通过对数据包的包长、间隔时间、握手顺序进行概率 analysis，就能断定这是否为加密翻墙流量。</p>
         <p>GoDuck 采用的 <strong>Trojan/VLESS + XTLS/Reality</strong> 协议栈，能够将流量完美伪装成正常的网页 HTTPS 浏览请求，这使得在检测机制眼中，你的翻墙行为与普通人浏览正常网页无异。</p>
     </section>
 
