@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正在安全連接 GoDuck 官方下載中心...</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f8fafc; display: flex; align-items: center; justify-content: center; height: 100vh; margin: 0; color: #1e293b; }
+        .loader-card { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); text-align: center; max-width: 400px; width: 90%; }
+        .spinner { width: 50px; height: 50px; border: 5px solid #f3f3f3; border-top: 5px solid #ff6600; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 20px; }
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        h3 { margin: 0 0 10px 0; font-size: 20px; color: #0f172a; }
+        p { font-size: 14px; color: #64748b; line-height: 1.6; margin: 0 0 20px 0; }
+        .btn-manual { display: inline-block; background: linear-gradient(135deg, #ff4b2b, #ff6600); color: white; text-decoration: none; padding: 12px 24px; border-radius: 25px; font-size: 14px; font-weight: bold; box-shadow: 0 4px 12px rgba(255,102,0,0.2); }
+    </style>
+</head>
+<body>
+
+<div class="loader-card">
+    <div class="spinner"></div>
+    <h3>正在连接官方安全下载通道</h3>
+    <p>正在为您配置专属 14 天专线加速补贴协议...<br>系统即将自动弹出安装包下载提示。</p>
+    
+    <a href="https://www.goduck.io/download?_branch_match_id=1557185352188095906&utm_source=300247&utm_campaign=promotion&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT89PKU3OLivI00ssKNDLyczL1g%2BxcHcqTysoMDFIsq8rSk1LLSrKzEuPTyrKLy9OLbJ1zijKz00FABHHuIxAAAAA" class="btn-manual">若未弹出，请点此手动下载</a>
+</div>
+
+<script>
+    // 延時 1.5 秒跳轉，給用戶足夠的心理緩衝與體驗
+    setTimeout(function() {
+        window.location.href = "https://www.goduck.io/download?_branch_match_id=1557185352188095906&utm_source=300247&utm_campaign=promotion&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXT89PKU3OLivI00ssKNDLyczL1g%2BxcHcqTysoMDFIsq8rSk1LLSrKzEuPTyrKLy9OLbJ1zijKz00FABHHuIxAAAAA";
+    }, 1500);
+</script>
+
+</body>
+</html>
