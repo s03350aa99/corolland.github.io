@@ -34,7 +34,7 @@
       "@type": "FAQPage",
       "mainEntity": [
         {"@type": "Question", "name": "2026年国内还有便宜好用的翻墙软件吗？", "acceptedAnswer": {"@type": "Answer", "text": "有的。GoDuck VPN 通过BGP专线与VLESS/Trojan协议优化，每月仅需一杯奶茶钱，是目前公认的高性价比机场梯子，且提供7天免费试用。"}},
-        {"@type": "Question", "name": "为什么国外的VPN大牌经常连接失败？", "acceptedAnswer": {"@type": "Answer", "text": "因为防火长城对通用协议进行了深度包检测。GoDuck VPN 采用自研混淆技术，能将流量伪装成正常 HTTPS 请求，从而实现稳定翻墙。"}},
+        {"@type": "Question", "name": "为什么国外的VPN大牌经常连接失败？", "acceptedAnswer": {"@type": "Answer", "text": "因为防火长城对通用协议进行了深度包检测. GoDuck VPN 采用自研混淆技术，能将流量伪装成正常 HTTPS 请求，从而实现 stable 翻墙。"}},
         {"@type": "Question", "name": "翻墙软件连不上怎么办？", "acceptedAnswer": {"@type": "Answer", "text": "建议：1. 切换协议（从WireGuard切至Trojan）；2. 避开晚高峰；3. 手动切换至冷门节点；4. 更新至最新客户端版本。"}},
         {"@type": "Question", "name": "自建梯子为什么不推荐？", "acceptedAnswer": {"@type": "Answer", "text": "自建梯子不仅运维成本高，而且IP极易被墙。个人用户，使用专业机场的专线（IPLC/IEPL）更加稳定安全且性价比高。"}}
       ]
@@ -65,7 +65,7 @@
         .seo-table th { background: #f1f5f9; }
         .footer-note { text-align: center; color: #64748b; font-size: 12px; margin-top: 50px; }
         
-        /* 🚀 底部懸浮條：極致響應式與排版修復 */
+        /* 🚀 底部懸浮條 */
         .sticky-cta { 
             position: fixed; 
             bottom: 0; 
@@ -79,7 +79,7 @@
             box-shadow: 0 -4px 15px rgba(0,0,0,0.06); 
             text-align: center; 
             z-index: 100; 
-            box-sizing: border-box; /* 強制向內收縮，完美修復右側爆開 Bug */
+            box-sizing: border-box; 
         }
         .sticky-cta a { display: block; background: var(--accent); color: #000; padding: 15px; border-radius: 8px; font-weight: bold; text-decoration: none; font-size: 16px; box-shadow: 0 4px 10px rgba(252,180,0,0.2); }
         img { max-width: 100%; border-radius: 8px; margin: 15px 0; height: auto; }
@@ -125,7 +125,7 @@
 
     <section id="tech">
         <h2>2. 技术揭秘：为什么传统协议会失效？</h2>
-        <p>防火长城并不是简单的“IP 黑名单”。现代翻墙的核心在于<strong>流量伪装 (Obfuscation)</strong>。传统的 VPN 协议（如 PPTP, L2TP, 以及未经优化的 WireGuard）拥有固定的握手特征。GFW 的 DPI 系统通过对数据包的包长、间隔时间、握手顺序进行概率分析，就能断定这是否为 VPN 流量。</p>
+        <p>防火长城并不是简单的“IP 黑名单”。现代翻墙的核心在于<strong>流量伪装 (Obfuscation)</strong>。传统的 VPN 协议（如 PPTP, L2TP, 以及未经优化的 WireGuard）拥有固定的握手特征。GFW 的 DPI 系统通过对数据包的包长、间隔时间、握手顺序进行概率 analysis，就能断定这是否为 VPN 流量。</p>
         <p>GoDuck 采用的 <strong>Trojan/VLESS + XTLS/Reality</strong> 协议栈，能够将流量完美伪装成正常的网页 HTTPS 浏览请求，这使得在 GFW 的眼中，你的翻墙行为与普通人浏览 order 网页无异。</p>
     </section>
 
@@ -141,7 +141,12 @@
 
     <section class="card" style="text-align: center; margin-top: 40px;">
         <h3>🚀 运维极客开源工具箱说明</h3>
-        <p style="font-size: 14px; color: #64748b;">本项目不仅提供网络优化指南，同时在开源目录 <a href="https://github.com/s03350aa99/s03350aa99.github.io/tree/main/tools" target="_blank" style="color: var(--accent); font-weight: bold;">/tools</a> 中托管了多款自动化网站运维、Google Search Console 自动推送及多节点延迟监控脚本，欢迎各位站长及技术同好 Fork 与交流。</p>
+        <p style="font-size: 14px; color: #64748b; line-height: 1.8;">
+            本项目不仅提供网络优化指南，同时在开源目录 <a href="https://github.com/s03350aa99/s03350aa99.github.io/tree/main/tools" target="_blank" style="color: var(--accent); font-weight: bold; text-decoration: none;">/tools</a> 中托管了多款自动化网站运维、Google Search Console 自动推送及多节点延迟监控脚本，欢迎各位站长及技术同好 Fork 与交流。
+        </p>
+        <p style="font-size: 14px; margin-top: 15px; border-top: 1px dashed #e2e8f0; padding-top: 15px;">
+            📚 <strong>延伸阅读：</strong><a href="best-airport-vpn.html" style="color: var(--accent); font-weight: bold; text-decoration: none; border-bottom: 1px solid var(--accent);">2026年便宜好用的翻墙机场推荐与稳定科学上网精选指南</a>
+        </p>
     </section>
 
     <footer class="footer-note">
@@ -150,7 +155,7 @@
 </article>
 
 <div class="sticky-cta">
-    <a href="download.html" rel="nofollow noopener noreferrer">⚡ 领取免费试用，开启稳定翻墙</a>
+    <a href="download.html" rel="nofollow noopener noreferrer">⚡ 领取免费试用，开启 stable 翻墙</a>
 </div>
 
 <script>
